@@ -1,805 +1,1107 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Yandex reklamasini boshlanishi:-->
+    <!-- Yandex.RTB -->
+    <script>
+      window.yaContextCb = window.yaContextCb || [];
+    </script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
+    <!-- Yandex reklamasini tugashi-->
 
-    <head>
-        <meta charset="utf-8">
-        <title>Choyxona</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+    <meta charset="utf-8" />
+    <title>Choyxona</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-        <!-- Libraries Stylesheet -->
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
 
-     
-
-
-    </head>
-
-    <body>
-
-        <!-- Spinner Start -->
-        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" role="status"></div>
+    <!-- Navbar start -->
+    <div class="container-fluid fixed-top">
+      <div class="container topbar bg-primary d-none d-lg-block">
+        <div class="d-flex justify-content-between">
+          <div class="top-info ps-2">
+            <small class="me-3"
+              ><i class="fas fa-map-marker-alt me-2 text-secondary"></i>
+              <a href="#" class="text-white"
+                >Samarqand viloyati Samarqand shahri "Amir Temur" ko'chasi 11
+                uy</a
+              ></small
+            >
+            <small class="me-3"
+              ><i class="fas fa-envelope me-2 text-secondary"></i
+              ><a href="#" class="text-white">+998-99-183-64-11</a></small
+            >
+          </div>
         </div>
-        <!-- Spinner End -->
+      </div>
+      <div class="container px-0">
+        <nav class="navbar navbar-light bg-white navbar-expand-xl">
+          <a href="index.html" class="navbar-brand"
+            ><h1 class="text-primary display-6">Samarqand choyxonasi</h1></a
+          >
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
 
+    <!-- Modal Search Start -->
 
-        <!-- Navbar start -->
-        <div class="container-fluid fixed-top">
-            <div class="container topbar bg-primary d-none d-lg-block">
-                <div class="d-flex justify-content-between">
-                    <div class="top-info ps-2">
-                        <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">Samarqand viloyati Samarqand shahri "Amir Temur" ko'chasi 11 uy</a></small>
-                        <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">+998-99-183-64-11</a></small>
-                    </div>
-                    
+    <!-- Modal Search End -->
+
+    <!-- Hero Start -->
+    <div class="container-fluid py-5 mb-5 hero-header">
+      <div class="container py-5">
+        <div class="row g-5 align-items-center">
+          <div class="col-md-12 col-lg-5">
+            <div
+              id="carouselId"
+              class="carousel slide position-relative"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active rounded">
+                  <img
+                    src="photoNew/bosh1.jpg"
+                    class="img-fluid w-100 h-100 bg-secondary rounded"
+                    alt="First slide"
+                  />
                 </div>
+                <div class="carousel-item rounded">
+                  <img
+                    src="photoNew/bosh2.jpg"
+                    class="img-fluid w-100 h-100 rounded"
+                    alt="Second slide"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselId"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Oldingi</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselId"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Keyingi</span>
+              </button>
             </div>
-            <div class="container px-0">
-                <nav class="navbar navbar-light bg-white navbar-expand-xl">
-                    <a href="index.html" class="navbar-brand"><h1 class="text-primary display-6">Samarqand choyxonasi</h1></a>
-                    
-                    
-                </nav>
-            </div>
+          </div>
         </div>
-        <!-- Navbar End -->
+      </div>
+    </div>
+    <!-- Hero End -->
 
-
-        <!-- Modal Search Start -->
-        
-        <!-- Modal Search End -->
-
-
-        <!-- Hero Start -->
-        <div class="container-fluid py-5 mb-5 hero-header">
-            <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                   
-                    <div class="col-md-12 col-lg-5">
-                        <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
-                            <div class="carousel-inner" role="listbox">
-                                <div class="carousel-item active rounded">
-                                    <img src="photoNew/bosh1.jpg" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
-                                    
-                                </div>
-                                <div class="carousel-item rounded">
-                                    <img src="photoNew/bosh2.jpg" class="img-fluid w-100 h-100 rounded" alt="Second slide">
-                                   
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Oldingi</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Keyingi</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+    <!-- Fruits Shop Start-->
+    <div class="container-fluid fruite py-5">
+      <div class="container py-5">
+        <div class="tab-class text-center">
+          <div class="row g-4">
+            <div class="col-lg-4 text-start">
+              <h1>Bizning mahsulotlar</h1>
             </div>
-        </div>
-        <!-- Hero End -->
-
-
-        
-        <!-- Fruits Shop Start-->
-        <div class="container-fluid fruite py-5">
-            <div class="container py-5">
-                <div class="tab-class text-center">
-                    <div class="row g-4">
-                        <div class="col-lg-4 text-start">
-                            <h1>Bizning mahsulotlar</h1>
+          </div>
+          <div class="tab-content">
+            <div id="tab-1" class="tab-pane fade show p-0 active">
+              <div class="row g-4">
+                <div class="col-lg-12">
+                  <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                      <div class="rounded position-relative fruite-item">
+                        <div class="fruite-img">
+                          <img
+                            src="photoNew/tovuqshashlik.jpg"
+                            class="img-fluid w-100 rounded-top"
+                            alt=""
+                          />
                         </div>
-                       
-                    </div>
-                    <div class="tab-content">
-                        <div id="tab-1" class="tab-pane fade show p-0 active">
-                            <div class="row g-4">
-                                <div class="col-lg-12">
-                                    <div class="row g-4">
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="photoNew/tovuqshashlik.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Kabob</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Tovuq shashlik</h4>
-                                                    <p>Tez fursatda </p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0"> 17 000 so'm 1 six</p>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="photoNew/qiyma.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Kabob</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Qiyma shashlik</h4>
-                                                    <p>Qarindoshlar davrasida</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">17 000 so'm 1 six</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="photoNew/shurva.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Sho'rva</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Sho'rva</h4>
-                                                    <p>To'ybop</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">15 000 so'm</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="photoNew/tabaka.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Tabaka</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Tabaka</h4>
-                                                    <p>Mehmonlarga</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">55 000 so'm  / kg</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="photoNew/napoleon.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Kabob</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Napoleon</h4>
-                                                    <p>Ajoyib ta'm</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">24 000 so'm / 1 six</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="photoNew/jigar.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Kabob</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Jigar shashlik</h4>
-                                                    <p>O'zgacha uslub</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">14 000 so'm / 1 six</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="photoNew/jiz.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Jiz</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Jiz</h4>
-                                                    <p>Juda mazali</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">140 000 so'm</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-lg-4 col-xl-3">
-                                            <div class="rounded position-relative fruite-item">
-                                                <div class="fruite-img">
-                                                    <img src="photoNew/mastava.jpg" class="img-fluid w-100 rounded-top" alt="">
-                                                </div>
-                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Issiq ovqat</div>
-                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
-                                                    <h4>Mastava</h4> 
-                                                    <p>O'zbek milliy taomi</p>
-                                                    <div class="d-flex justify-content-between flex-lg-wrap">
-                                                        <p class="text-dark fs-5 fw-bold mb-0">20 000 so'm</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div
+                          class="text-white bg-secondary px-3 py-1 rounded position-absolute"
+                          style="top: 10px; left: 10px"
+                        >
+                          Kabob
                         </div>
-                        
-                       
-                       
-
-                       
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        
-
+                        <div
+                          class="p-4 border border-secondary border-top-0 rounded-bottom"
+                        >
+                          <h4>Tovuq shashlik</h4>
+                          <p>Tez fursatda</p>
+                          <div
+                            class="d-flex justify-content-between flex-lg-wrap"
+                          >
+                            <p class="text-dark fs-5 fw-bold mb-0">
+                              17 000 so'm 1 six
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                </div>      
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                      <div class="rounded position-relative fruite-item">
+                        <div class="fruite-img">
+                          <img
+                            src="photoNew/qiyma.jpg"
+                            class="img-fluid w-100 rounded-top"
+                            alt=""
+                          />
+                        </div>
+                        <div
+                          class="text-white bg-secondary px-3 py-1 rounded position-absolute"
+                          style="top: 10px; left: 10px"
+                        >
+                          Kabob
+                        </div>
+                        <div
+                          class="p-4 border border-secondary border-top-0 rounded-bottom"
+                        >
+                          <h4>Qiyma shashlik</h4>
+                          <p>Qarindoshlar davrasida</p>
+                          <div
+                            class="d-flex justify-content-between flex-lg-wrap"
+                          >
+                            <p class="text-dark fs-5 fw-bold mb-0">
+                              17 000 so'm 1 six
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                      <div class="rounded position-relative fruite-item">
+                        <div class="fruite-img">
+                          <img
+                            src="photoNew/shurva.jpg"
+                            class="img-fluid w-100 rounded-top"
+                            alt=""
+                          />
+                        </div>
+                        <div
+                          class="text-white bg-secondary px-3 py-1 rounded position-absolute"
+                          style="top: 10px; left: 10px"
+                        >
+                          Sho'rva
+                        </div>
+                        <div
+                          class="p-4 border border-secondary border-top-0 rounded-bottom"
+                        >
+                          <h4>Sho'rva</h4>
+                          <p>To'ybop</p>
+                          <div
+                            class="d-flex justify-content-between flex-lg-wrap"
+                          >
+                            <p class="text-dark fs-5 fw-bold mb-0">
+                              15 000 so'm
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                      <div class="rounded position-relative fruite-item">
+                        <div class="fruite-img">
+                          <img
+                            src="photoNew/tabaka.jpg"
+                            class="img-fluid w-100 rounded-top"
+                            alt=""
+                          />
+                        </div>
+                        <div
+                          class="text-white bg-secondary px-3 py-1 rounded position-absolute"
+                          style="top: 10px; left: 10px"
+                        >
+                          Tabaka
+                        </div>
+                        <div
+                          class="p-4 border border-secondary border-top-0 rounded-bottom"
+                        >
+                          <h4>Tabaka</h4>
+                          <p>Mehmonlarga</p>
+                          <div
+                            class="d-flex justify-content-between flex-lg-wrap"
+                          >
+                            <p class="text-dark fs-5 fw-bold mb-0">
+                              55 000 so'm / kg
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                      <div class="rounded position-relative fruite-item">
+                        <div class="fruite-img">
+                          <img
+                            src="photoNew/napoleon.jpg"
+                            class="img-fluid w-100 rounded-top"
+                            alt=""
+                          />
+                        </div>
+                        <div
+                          class="text-white bg-secondary px-3 py-1 rounded position-absolute"
+                          style="top: 10px; left: 10px"
+                        >
+                          Kabob
+                        </div>
+                        <div
+                          class="p-4 border border-secondary border-top-0 rounded-bottom"
+                        >
+                          <h4>Napoleon</h4>
+                          <p>Ajoyib ta'm</p>
+                          <div
+                            class="d-flex justify-content-between flex-lg-wrap"
+                          >
+                            <p class="text-dark fs-5 fw-bold mb-0">
+                              24 000 so'm / 1 six
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                      <div class="rounded position-relative fruite-item">
+                        <div class="fruite-img">
+                          <img
+                            src="photoNew/jigar.jpg"
+                            class="img-fluid w-100 rounded-top"
+                            alt=""
+                          />
+                        </div>
+                        <div
+                          class="text-white bg-secondary px-3 py-1 rounded position-absolute"
+                          style="top: 10px; left: 10px"
+                        >
+                          Kabob
+                        </div>
+                        <div
+                          class="p-4 border border-secondary border-top-0 rounded-bottom"
+                        >
+                          <h4>Jigar shashlik</h4>
+                          <p>O'zgacha uslub</p>
+                          <div
+                            class="d-flex justify-content-between flex-lg-wrap"
+                          >
+                            <p class="text-dark fs-5 fw-bold mb-0">
+                              14 000 so'm / 1 six
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                      <div class="rounded position-relative fruite-item">
+                        <div class="fruite-img">
+                          <img
+                            src="photoNew/jiz.jpg"
+                            class="img-fluid w-100 rounded-top"
+                            alt=""
+                          />
+                        </div>
+                        <div
+                          class="text-white bg-secondary px-3 py-1 rounded position-absolute"
+                          style="top: 10px; left: 10px"
+                        >
+                          Jiz
+                        </div>
+                        <div
+                          class="p-4 border border-secondary border-top-0 rounded-bottom"
+                        >
+                          <h4>Jiz</h4>
+                          <p>Juda mazali</p>
+                          <div
+                            class="d-flex justify-content-between flex-lg-wrap"
+                          >
+                            <p class="text-dark fs-5 fw-bold mb-0">
+                              140 000 so'm
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                      <div class="rounded position-relative fruite-item">
+                        <div class="fruite-img">
+                          <img
+                            src="photoNew/mastava.jpg"
+                            class="img-fluid w-100 rounded-top"
+                            alt=""
+                          />
+                        </div>
+                        <div
+                          class="text-white bg-secondary px-3 py-1 rounded position-absolute"
+                          style="top: 10px; left: 10px"
+                        >
+                          Issiq ovqat
+                        </div>
+                        <div
+                          class="p-4 border border-secondary border-top-0 rounded-bottom"
+                        >
+                          <h4>Mastava</h4>
+                          <p>O'zbek milliy taomi</p>
+                          <div
+                            class="d-flex justify-content-between flex-lg-wrap"
+                          >
+                            <p class="text-dark fs-5 fw-bold mb-0">
+                              20 000 so'm
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- Fruits Shop End-->
+      </div>
+    </div>
+    <!-- Fruits Shop End-->
 
-
-        <!-- Featurs Start -->
-        <div class="container-fluid service py-5">
-            <div class="container py-5">
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-6 col-lg-4">
-                        <a href="#">
-                            <div class="service-item bg-secondary rounded border border-secondary">
-                                <img src="photoNew/lavash.jpg" class="img-fluid rounded-top w-100" alt="">
-                                <div class="px-4 rounded-bottom">
-                                    <div class="service-content bg-primary text-center p-4 rounded">
-                                        <h5 class="text-white">Lavash</h5>
-                                        <h4 class="mb-0">30 000 so'm</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <a href="#">
-                            <div class="service-item bg-dark rounded border border-dark">
-                                <img src="photoNew/somsa.jpg" class="img-fluid rounded-top w-100" alt="">
-                                <div class="px-4 rounded-bottom">
-                                    <div class="service-content bg-light text-center p-4 rounded">
-                                        <h5 class="text-primary">Somsa</h5>
-                                        <h4 class="mb-0">10 000 so'm</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <a href="#">
-                            <div class="service-item bg-primary rounded border border-primary">
-                                <img src="photoNew/tandir.jpg" class="img-fluid rounded-top w-100" alt="">
-                                <div class="px-4 rounded-bottom">
-                                    <div class="service-content bg-secondary text-center p-4 rounded">
-                                        <h5 class="text-white">Tandir</h5>
-                                        <h4 class="mb-0">55 000 so'm</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+    <!-- Featurs Start -->
+    <div class="container-fluid service py-5">
+      <div class="container py-5">
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <a href="#">
+              <div
+                class="service-item bg-secondary rounded border border-secondary"
+              >
+                <img
+                  src="photoNew/lavash.jpg"
+                  class="img-fluid rounded-top w-100"
+                  alt=""
+                />
+                <div class="px-4 rounded-bottom">
+                  <div
+                    class="service-content bg-primary text-center p-4 rounded"
+                  >
+                    <h5 class="text-white">Lavash</h5>
+                    <h4 class="mb-0">30 000 so'm</h4>
+                  </div>
                 </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="#">
+              <div class="service-item bg-dark rounded border border-dark">
+                <img
+                  src="photoNew/somsa.jpg"
+                  class="img-fluid rounded-top w-100"
+                  alt=""
+                />
+                <div class="px-4 rounded-bottom">
+                  <div class="service-content bg-light text-center p-4 rounded">
+                    <h5 class="text-primary">Somsa</h5>
+                    <h4 class="mb-0">10 000 so'm</h4>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="#">
+              <div
+                class="service-item bg-primary rounded border border-primary"
+              >
+                <img
+                  src="photoNew/tandir.jpg"
+                  class="img-fluid rounded-top w-100"
+                  alt=""
+                />
+                <div class="px-4 rounded-bottom">
+                  <div
+                    class="service-content bg-secondary text-center p-4 rounded"
+                  >
+                    <h5 class="text-white">Tandir</h5>
+                    <h4 class="mb-0">55 000 so'm</h4>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Featurs End -->
+
+    <!-- Vesitable Shop Start-->
+    <div class="container-fluid vesitable py-5">
+      <div class="container py-5">
+        <h1 class="mb-0">Xonalarimiz</h1>
+        <div class="owl-carousel vegetable-carousel justify-content-center">
+          <div
+            class="border border-primary rounded position-relative vesitable-item"
+          >
+            <div class="vesitable-img">
+              <img
+                src="photoNew/x1.jpg"
+                class="img-fluid w-100 rounded-top"
+                alt=""
+              />
             </div>
-        </div>
-        <!-- Featurs End -->
-
-
-        <!-- Vesitable Shop Start-->
-        <div class="container-fluid vesitable py-5">
-            <div class="container py-5">
-                <h1 class="mb-0">Xonalarimiz</h1>
-                <div class="owl-carousel vegetable-carousel justify-content-center">
-                    <div class="border border-primary rounded position-relative vesitable-item">
-                        <div class="vesitable-img">
-                            <img src="photoNew/x1.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">xonalar</div>
-                        <div class="p-4 rounded-bottom">
-                            <h4>Zal</h4>
-                            <p>To'y uchun</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">40 kishilik</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border border-primary rounded position-relative vesitable-item">
-                        <div class="vesitable-img">
-                            <img src="photoNew/x2.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">xonalar</div>
-                        <div class="p-4 rounded-bottom">
-                            <h4>1-xona</h4>
-                            <p>Banket uchun</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">12 kishilik</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border border-primary rounded position-relative vesitable-item">
-                        <div class="vesitable-img">
-                            <img src="photoNew/x3.jpg" class="img-fluid w-100 rounded-top bg-light" alt="">
-                        </div>
-                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">xonalar</div>
-                        <div class="p-4 rounded-bottom">
-                            <h4>2-xona</h4>
-                            <p>Oilaviy tadbirlar uchun</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">14 kishilik</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border border-primary rounded position-relative vesitable-item">
-                        <div class="vesitable-img">
-                            <img src="photoNew/x4.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">ochiq tabiat</div>
-                        <div class="p-4 rounded-bottom">
-                            <h4>Manzarali joy</h4>
-                            <p>Mehmonlar uchun</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">15 kishilik</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border border-primary rounded position-relative vesitable-item">
-                        <div class="vesitable-img">
-                            <img src="photoNew/x5.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">konferens</div>
-                        <div class="p-4 rounded-bottom">
-                            <h4>Zal</h4>
-                            <p>Biznes uchun</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">10 kishilik</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border border-primary rounded position-relative vesitable-item">
-                        <div class="vesitable-img">
-                            <img src="photoNew/x6.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Cofe break</div>
-                        <div class="p-4 rounded-bottom">
-                            <h4>Zal</h4>
-                            <p>Nonushta uchun</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">10 kishilik</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border border-primary rounded position-relative vesitable-item">
-                        <div class="vesitable-img">
-                            <img src="photoNew/x7.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">xonalar</div>
-                        <div class="p-4 rounded-bottom">
-                            <h4>choyxona</h4>
-                            <p>Qarindoshlar uchun</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">24 kishilik</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="border border-primary rounded position-relative vesitable-item">
-                        <div class="vesitable-img">
-                            <img src="photoNew/x8.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">WiFi</div>
-                        <div class="p-4 rounded-bottom">
-                            <h4>Zal</h4>
-                            <p>tug'ilgan kun uchun</p>
-                            <div class="d-flex justify-content-between flex-lg-wrap">
-                                <p class="text-dark fs-5 fw-bold mb-0">15 kishilik</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div
+              class="text-white bg-primary px-3 py-1 rounded position-absolute"
+              style="top: 10px; right: 10px"
+            >
+              xonalar
             </div>
-        </div>
-        <!-- Vesitable Shop End -->
-
-
-       
-        <!-- Bestsaler Product Start -->
-        <div class="container-fluid py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto mb-5" style="max-width: 700px;">
-                    <h1 class="display-4">Ichimliklar</h1>
-                    <p>Zamonaviy</p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-6 col-xl-4">
-                        <div class="p-4 rounded bg-light">
-                            <div class="row align-items-center">
-                                <div class="col-6">
-                                    <img src="photoNew/pepsi.jpg" class="img-fluid rounded-circle w-100" alt="">
-                                </div>
-                                <div class="col-6">
-                                    <a href="#" class="h5">Pepsi</a>
-                                    <div class="d-flex my-3">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <h4 class="mb-3">15 000 so'm</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4">
-                        <div class="p-4 rounded bg-light">
-                            <div class="row align-items-center">
-                                <div class="col-6">
-                                    <img src="photoNew/sokj7.jpg" class="img-fluid rounded-circle w-100" alt="">
-                                </div>
-                                <div class="col-6">
-                                    <a href="#" class="h5">J7</a>
-                                    <div class="d-flex my-3">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <h4 class="mb-3">17 000 so'm</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4">
-                        <div class="p-4 rounded bg-light">
-                            <div class="row align-items-center">
-                                <div class="col-6">
-                                    <img src="photoNew/flash.jpg" class="img-fluid rounded-circle w-100" alt="">
-                                </div>
-                                <div class="col-6">
-                                    <a href="#" class="h5">Flash</a>
-                                    <div class="d-flex my-3">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <h4 class="mb-3">10 000 so'm</h4>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4">
-                        <div class="p-4 rounded bg-light">
-                            <div class="row align-items-center">
-                                <div class="col-6">
-                                    <img src="photoNew/moxito.jpg" class="img-fluid rounded-circle w-100" alt="">
-                                </div>
-                                <div class="col-6">
-                                    <a href="#" class="h5">Moxito</a>
-                                    <div class="d-flex my-3">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <h4 class="mb-3">11 000 so'm</h4>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4">
-                        <div class="p-4 rounded bg-light">
-                            <div class="row align-items-center">
-                                <div class="col-6">
-                                    <img src="photoNew/sokSad.jpg" class="img-fluid rounded-circle w-100" alt="">
-                                </div>
-                                <div class="col-6">
-                                    <a href="#" class="h5">Наш сад</a>
-                                    <div class="d-flex my-3">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <h4 class="mb-3">14 000 so'm</h4>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4">
-                        <div class="p-4 rounded bg-light">
-                            <div class="row align-items-center">
-                                <div class="col-6">
-                                    <img src="photoNew/rockstar.jpg" class="img-fluid rounded-circle w-100" alt="">
-                                </div>
-                                <div class="col-6">
-                                    <a href="#" class="h5">Rockstar</a>
-                                    <div class="d-flex my-3">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <h4 class="mb-3">13 000 so'm</h4>
-                                   </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="text-center">
-                            <img src="photoNew/shashlikOxiridagi.jpg" class="img-fluid rounded" alt="">
-                            <div class="py-4">
-                                <a href="#" class="h5">Shashlik</a>
-                                <div class="d-flex my-3 justify-content-center">
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h4 class="mb-3">21 000 so'm 1 six</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="text-center">
-                            <img src="photoNew/dumbashashlik.jpg" class="img-fluid rounded" alt="">
-                            <div class="py-4">
-                                <a href="#" class="h5">Dumba shashlik</a>
-                                <div class="d-flex my-3 justify-content-center">
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h4 class="mb-3"> 22 000 so'm 1 six</h4>
-                                </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="text-center">
-                            <img src="photoNew/xasib.jpg" class="img-fluid rounded" alt="">
-                            <div class="py-4">
-                                <a href="#" class="h5">Xasib</a>
-                                <div class="d-flex my-3 justify-content-center">
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h4 class="mb-3">156 000 so'm</h4>
-                                </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-3">
-                        <div class="text-center">
-                            <img src="photoNew/rulet.jpg" class="img-fluid rounded" alt="">
-                            <div class="py-2">
-                                <a href="#" class="h5">Rulet</a>
-                                <div class="d-flex my-3 justify-content-center">
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star text-primary"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <h4 class="mb-3">21 000 so'm 1 six</h4>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="p-4 rounded-bottom">
+              <h4>Zal</h4>
+              <p>To'y uchun</p>
+              <div class="d-flex justify-content-between flex-lg-wrap">
+                <p class="text-dark fs-5 fw-bold mb-0">40 kishilik</p>
+              </div>
             </div>
-        </div>
-        <!-- Bestsaler Product End -->
-
-
-      
-        <!-- Tastimonial Start -->
-        <div class="container-fluid testimonial py-5">
-            <div class="container py-5">
-                <div class="testimonial-header text-center">
-                    <h4 class="text-primary">Motivasiya</h4>
-                    <h1 class="display-5 mb-5 text-dark">Biz haqimizda</h1>
-                </div>
-                <div class="owl-carousel testimonial-carousel">
-                    <div class="testimonial-item img-border-radius bg-light rounded p-4">
-                        <div class="position-relative">
-                            <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>
-                            <div class="mb-4 pb-4 border-bottom border-secondary">
-                                <p class="mb-0">Samarqand choyxonasi zo'r! 
-                                </p>
-                            </div>
-                            <div class="d-flex align-items-center flex-nowrap">
-                                <div class="bg-secondary rounded">
-                                    <img src="photoNew/odam3.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
-                                </div>
-                                <div class="ms-4 d-block">
-                                    <h4 class="text-dark">O'tkir Malikov</h4>
-                                    <p class="m-0 pb-3">tadbirkor</p>
-                                    <div class="d-flex pe-5">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item img-border-radius bg-light rounded p-4">
-                        <div class="position-relative">
-                            <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>
-                            <div class="mb-4 pb-4 border-bottom border-secondary">
-                                <p class="mb-0">Ishlaringizga omad.
-                                </p>
-                            </div>
-                            <div class="d-flex align-items-center flex-nowrap">
-                                <div class="bg-secondary rounded">
-                                    <img src="photoNew/odam1.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
-                                </div>
-                                <div class="ms-4 d-block">
-                                    <h4 class="text-dark">Sardor Shuxratov</h4>
-                                    <p class="m-0 pb-3">tadbirkor</p>
-                                    <div class="d-flex pe-5">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item img-border-radius bg-light rounded p-4">
-                        <div class="position-relative">
-                            <i class="fa fa-quote-right fa-2x text-secondary position-absolute" style="bottom: 30px; right: 0;"></i>
-                            <div class="mb-4 pb-4 border-bottom border-secondary">
-                                <p class="mb-0">Shashlikni yaxshi pishirishadi.
-                                </p>
-                            </div>
-                            <div class="d-flex align-items-center flex-nowrap">
-                                <div class="bg-secondary rounded">
-                                    <img src="photoNew/odam2.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
-                                </div>
-                                <div class="ms-4 d-block">
-                                    <h4 class="text-dark">Muzaffar Mamatov</h4>
-                                    <p class="m-0 pb-3">tadbirkor</p>
-                                    <div class="d-flex pe-5">
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                        <i class="fas fa-star text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div
+            class="border border-primary rounded position-relative vesitable-item"
+          >
+            <div class="vesitable-img">
+              <img
+                src="photoNew/x2.jpg"
+                class="img-fluid w-100 rounded-top"
+                alt=""
+              />
             </div>
-        </div>
-        <!-- Tastimonial End -->
-
-
-<!-- Reklamniy set Yandexning kodi boshlanishi: -->
-
-<!-- Reklamniy set Yandexning kodi tugashi: -->
-
-
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
-            <div class="container py-5">
-                <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
-                    <div class="row g-4">
-                        <div class="col-lg-3">
-                            <a href="#">
-                                <h1 class="text-primary mb-0">Samarqand choyxonasi</h1>
-                                <p class="text-secondary mb-0">Sifatli mahsulotlar</p>
-                            </a>
-                        </div>
-                        
-                       
-                    </div>
-                </div>
-                <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-item">
-                            <h4 class="text-light mb-3">Bizning choyxonamiz</h4>
-                            <p class="mb-4">
-                                O'zgacha taomlar. Biz taomlarimizning mazasiga e'tibor qaratamiz. Har bir retseptda yangi taassurotlar bo'lishi uchun 2018 yildan beri xizmat qilmoqdamiz.</p>
-                            
-                        </div>
-                    </div>
-                    
-                   
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-item">
-                            <h4 class="text-light mb-3">Kontakt</h4>
-                            <p>Manzil: Samarqand viloyati Samarqand shahri "Amir Temur" ko'chasi 11 uy</p>
-                            <p>Telefon: +998-99-183-64-11</p>
-                            <p>Telefon: +998-97-123-45-67</p>
-                            <p>To'lov turlari: Naqd pul, Click, PayMe, Paynet </p>
-                            
-                        </div>
-                    </div>
-                </div>
+            <div
+              class="text-white bg-primary px-3 py-1 rounded position-absolute"
+              style="top: 10px; right: 10px"
+            >
+              xonalar
             </div>
-        </div>
-        <!-- Footer End -->
-
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright bg-dark py-4">
-            <div class="container">
-                <div class="row">
-                    
-                    <div class="col-md-6 my-auto text-center text-md-end text-white">
-                        
-                        
-                        Usbu sayt <a class="border-bottom" href="https://t.me/rxg1985">RASULOV XAFIZ </a> tomonidan ishlab chiqilgan
-                        
-                    </div>
-
-                    
-
-                </div>
+            <div class="p-4 rounded-bottom">
+              <h4>1-xona</h4>
+              <p>Banket uchun</p>
+              <div class="d-flex justify-content-between flex-lg-wrap">
+                <p class="text-dark fs-5 fw-bold mb-0">12 kishilik</p>
+              </div>
             </div>
+          </div>
+          <div
+            class="border border-primary rounded position-relative vesitable-item"
+          >
+            <div class="vesitable-img">
+              <img
+                src="photoNew/x3.jpg"
+                class="img-fluid w-100 rounded-top bg-light"
+                alt=""
+              />
+            </div>
+            <div
+              class="text-white bg-primary px-3 py-1 rounded position-absolute"
+              style="top: 10px; right: 10px"
+            >
+              xonalar
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>2-xona</h4>
+              <p>Oilaviy tadbirlar uchun</p>
+              <div class="d-flex justify-content-between flex-lg-wrap">
+                <p class="text-dark fs-5 fw-bold mb-0">14 kishilik</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border border-primary rounded position-relative vesitable-item"
+          >
+            <div class="vesitable-img">
+              <img
+                src="photoNew/x4.jpg"
+                class="img-fluid w-100 rounded-top"
+                alt=""
+              />
+            </div>
+            <div
+              class="text-white bg-primary px-3 py-1 rounded position-absolute"
+              style="top: 10px; right: 10px"
+            >
+              ochiq tabiat
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>Manzarali joy</h4>
+              <p>Mehmonlar uchun</p>
+              <div class="d-flex justify-content-between flex-lg-wrap">
+                <p class="text-dark fs-5 fw-bold mb-0">15 kishilik</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border border-primary rounded position-relative vesitable-item"
+          >
+            <div class="vesitable-img">
+              <img
+                src="photoNew/x5.jpg"
+                class="img-fluid w-100 rounded-top"
+                alt=""
+              />
+            </div>
+            <div
+              class="text-white bg-primary px-3 py-1 rounded position-absolute"
+              style="top: 10px; right: 10px"
+            >
+              konferens
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>Zal</h4>
+              <p>Biznes uchun</p>
+              <div class="d-flex justify-content-between flex-lg-wrap">
+                <p class="text-dark fs-5 fw-bold mb-0">10 kishilik</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border border-primary rounded position-relative vesitable-item"
+          >
+            <div class="vesitable-img">
+              <img
+                src="photoNew/x6.jpg"
+                class="img-fluid w-100 rounded-top"
+                alt=""
+              />
+            </div>
+            <div
+              class="text-white bg-primary px-3 py-1 rounded position-absolute"
+              style="top: 10px; right: 10px"
+            >
+              Cofe break
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>Zal</h4>
+              <p>Nonushta uchun</p>
+              <div class="d-flex justify-content-between flex-lg-wrap">
+                <p class="text-dark fs-5 fw-bold mb-0">10 kishilik</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border border-primary rounded position-relative vesitable-item"
+          >
+            <div class="vesitable-img">
+              <img
+                src="photoNew/x7.jpg"
+                class="img-fluid w-100 rounded-top"
+                alt=""
+              />
+            </div>
+            <div
+              class="text-white bg-primary px-3 py-1 rounded position-absolute"
+              style="top: 10px; right: 10px"
+            >
+              xonalar
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>choyxona</h4>
+              <p>Qarindoshlar uchun</p>
+              <div class="d-flex justify-content-between flex-lg-wrap">
+                <p class="text-dark fs-5 fw-bold mb-0">24 kishilik</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="border border-primary rounded position-relative vesitable-item"
+          >
+            <div class="vesitable-img">
+              <img
+                src="photoNew/x8.jpg"
+                class="img-fluid w-100 rounded-top"
+                alt=""
+              />
+            </div>
+            <div
+              class="text-white bg-primary px-3 py-1 rounded position-absolute"
+              style="top: 10px; right: 10px"
+            >
+              WiFi
+            </div>
+            <div class="p-4 rounded-bottom">
+              <h4>Zal</h4>
+              <p>tug'ilgan kun uchun</p>
+              <div class="d-flex justify-content-between flex-lg-wrap">
+                <p class="text-dark fs-5 fw-bold mb-0">15 kishilik</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Copyright End -->
+      </div>
+    </div>
+    <!-- Vesitable Shop End -->
 
+    <!-- Bestsaler Product Start -->
+    <div class="container-fluid py-5">
+      <div class="container py-5">
+        <div class="text-center mx-auto mb-5" style="max-width: 700px">
+          <h1 class="display-4">Ichimliklar</h1>
+          <p>Zamonaviy</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-6 col-xl-4">
+            <div class="p-4 rounded bg-light">
+              <div class="row align-items-center">
+                <div class="col-6">
+                  <img
+                    src="photoNew/pepsi.jpg"
+                    class="img-fluid rounded-circle w-100"
+                    alt=""
+                  />
+                </div>
+                <div class="col-6">
+                  <a href="#" class="h5">Pepsi</a>
+                  <div class="d-flex my-3">
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h4 class="mb-3">15 000 so'm</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-4">
+            <div class="p-4 rounded bg-light">
+              <div class="row align-items-center">
+                <div class="col-6">
+                  <img
+                    src="photoNew/sokj7.jpg"
+                    class="img-fluid rounded-circle w-100"
+                    alt=""
+                  />
+                </div>
+                <div class="col-6">
+                  <a href="#" class="h5">J7</a>
+                  <div class="d-flex my-3">
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h4 class="mb-3">17 000 so'm</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-4">
+            <div class="p-4 rounded bg-light">
+              <div class="row align-items-center">
+                <div class="col-6">
+                  <img
+                    src="photoNew/flash.jpg"
+                    class="img-fluid rounded-circle w-100"
+                    alt=""
+                  />
+                </div>
+                <div class="col-6">
+                  <a href="#" class="h5">Flash</a>
+                  <div class="d-flex my-3">
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h4 class="mb-3">10 000 so'm</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-4">
+            <div class="p-4 rounded bg-light">
+              <div class="row align-items-center">
+                <div class="col-6">
+                  <img
+                    src="photoNew/moxito.jpg"
+                    class="img-fluid rounded-circle w-100"
+                    alt=""
+                  />
+                </div>
+                <div class="col-6">
+                  <a href="#" class="h5">Moxito</a>
+                  <div class="d-flex my-3">
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h4 class="mb-3">11 000 so'm</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-4">
+            <div class="p-4 rounded bg-light">
+              <div class="row align-items-center">
+                <div class="col-6">
+                  <img
+                    src="photoNew/sokSad.jpg"
+                    class="img-fluid rounded-circle w-100"
+                    alt=""
+                  />
+                </div>
+                <div class="col-6">
+                  <a href="#" class="h5">Наш сад</a>
+                  <div class="d-flex my-3">
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h4 class="mb-3">14 000 so'm</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-4">
+            <div class="p-4 rounded bg-light">
+              <div class="row align-items-center">
+                <div class="col-6">
+                  <img
+                    src="photoNew/rockstar.jpg"
+                    class="img-fluid rounded-circle w-100"
+                    alt=""
+                  />
+                </div>
+                <div class="col-6">
+                  <a href="#" class="h5">Rockstar</a>
+                  <div class="d-flex my-3">
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <h4 class="mb-3">13 000 so'm</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="text-center">
+              <img
+                src="photoNew/shashlikOxiridagi.jpg"
+                class="img-fluid rounded"
+                alt=""
+              />
+              <div class="py-4">
+                <a href="#" class="h5">Shashlik</a>
+                <div class="d-flex my-3 justify-content-center">
+                  <i class="fas fa-star text-primary"></i>
+                  <i class="fas fa-star text-primary"></i>
+                  <i class="fas fa-star text-primary"></i>
+                  <i class="fas fa-star text-primary"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h4 class="mb-3">21 000 so'm 1 six</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="text-center">
+              <img
+                src="photoNew/dumbashashlik.jpg"
+                class="img-fluid rounded"
+                alt=""
+              />
+              <div class="py-4">
+                <a href="#" class="h5">Dumba shashlik</a>
+                <div class="d-flex my-3 justify-content-center">
+                  <i class="fas fa-star text-primary"></i>
+                  <i class="fas fa-star text-primary"></i>
+                  <i class="fas fa-star text-primary"></i>
+                  <i class="fas fa-star text-primary"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h4 class="mb-3">22 000 so'm 1 six</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="text-center">
+              <img src="photoNew/xasib.jpg" class="img-fluid rounded" alt="" />
+              <div class="py-4">
+                <a href="#" class="h5">Xasib</a>
+                <div class="d-flex my-3 justify-content-center">
+                  <i class="fas fa-star text-primary"></i>
+                  <i class="fas fa-star text-primary"></i>
+                  <i class="fas fa-star text-primary"></i>
+                  <i class="fas fa-star text-primary"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h4 class="mb-3">156 000 so'm</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="text-center">
+              <img src="photoNew/rulet.jpg" class="img-fluid rounded" alt="" />
+              <div class="py-2">
+                <a href="#" class="h5">Rulet</a>
+                <div class="d-flex my-3 justify-content-center">
+                  <i class="fas fa-star text-primary"></i>
+                  <i class="fas fa-star text-primary"></i>
+                  <i class="fas fa-star text-primary"></i>
+                  <i class="fas fa-star text-primary"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <h4 class="mb-3">21 000 so'm 1 six</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bestsaler Product End -->
 
+    <!-- Yandex reklama boshlanishi:-->
+    <!-- Yandex.RTB R-A-13254884-1 -->
+    <div id="yandex_rtb_R-A-13254884-1"></div>
+    <script>
+      window.yaContextCb.push(() => {
+        Ya.Context.AdvManager.render({
+          blockId: "R-A-13254884-1",
+          renderTo: "yandex_rtb_R-A-13254884-1",
+          type: "feed",
+        });
+      });
+    </script>
+    <!-- Yandex reklama tugashi-->
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+    <!-- Tastimonial Start -->
+    <div class="container-fluid testimonial py-5">
+      <div class="container py-5">
+        <div class="testimonial-header text-center">
+          <h4 class="text-primary">Motivasiya</h4>
+          <h1 class="display-5 mb-5 text-dark">Biz haqimizda</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel">
+          <div class="testimonial-item img-border-radius bg-light rounded p-4">
+            <div class="position-relative">
+              <i
+                class="fa fa-quote-right fa-2x text-secondary position-absolute"
+                style="bottom: 30px; right: 0"
+              ></i>
+              <div class="mb-4 pb-4 border-bottom border-secondary">
+                <p class="mb-0">Samarqand choyxonasi zo'r!</p>
+              </div>
+              <div class="d-flex align-items-center flex-nowrap">
+                <div class="bg-secondary rounded">
+                  <img
+                    src="photoNew/odam3.jpg"
+                    class="img-fluid rounded"
+                    style="width: 100px; height: 100px"
+                    alt=""
+                  />
+                </div>
+                <div class="ms-4 d-block">
+                  <h4 class="text-dark">O'tkir Malikov</h4>
+                  <p class="m-0 pb-3">tadbirkor</p>
+                  <div class="d-flex pe-5">
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item img-border-radius bg-light rounded p-4">
+            <div class="position-relative">
+              <i
+                class="fa fa-quote-right fa-2x text-secondary position-absolute"
+                style="bottom: 30px; right: 0"
+              ></i>
+              <div class="mb-4 pb-4 border-bottom border-secondary">
+                <p class="mb-0">Ishlaringizga omad.</p>
+              </div>
+              <div class="d-flex align-items-center flex-nowrap">
+                <div class="bg-secondary rounded">
+                  <img
+                    src="photoNew/odam1.jpg"
+                    class="img-fluid rounded"
+                    style="width: 100px; height: 100px"
+                    alt=""
+                  />
+                </div>
+                <div class="ms-4 d-block">
+                  <h4 class="text-dark">Sardor Shuxratov</h4>
+                  <p class="m-0 pb-3">tadbirkor</p>
+                  <div class="d-flex pe-5">
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item img-border-radius bg-light rounded p-4">
+            <div class="position-relative">
+              <i
+                class="fa fa-quote-right fa-2x text-secondary position-absolute"
+                style="bottom: 30px; right: 0"
+              ></i>
+              <div class="mb-4 pb-4 border-bottom border-secondary">
+                <p class="mb-0">Shashlikni yaxshi pishirishadi.</p>
+              </div>
+              <div class="d-flex align-items-center flex-nowrap">
+                <div class="bg-secondary rounded">
+                  <img
+                    src="photoNew/odam2.jpg"
+                    class="img-fluid rounded"
+                    style="width: 100px; height: 100px"
+                    alt=""
+                  />
+                </div>
+                <div class="ms-4 d-block">
+                  <h4 class="text-dark">Muzaffar Mamatov</h4>
+                  <p class="m-0 pb-3">tadbirkor</p>
+                  <div class="d-flex pe-5">
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                    <i class="fas fa-star text-primary"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tastimonial End -->
 
-        
+    <!-- Reklamniy set Yandexning kodi boshlanishi: -->
+
+    <!-- Reklamniy set Yandexning kodi tugashi: -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+      <div class="container py-5">
+        <div
+          class="pb-4 mb-4"
+          style="border-bottom: 1px solid rgba(226, 175, 24, 0.5)"
+        >
+          <div class="row g-4">
+            <div class="col-lg-3">
+              <a href="#">
+                <h1 class="text-primary mb-0">Samarqand choyxonasi</h1>
+                <p class="text-secondary mb-0">Sifatli mahsulotlar</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-item">
+              <h4 class="text-light mb-3">Bizning choyxonamiz</h4>
+              <p class="mb-4">
+                O'zgacha taomlar. Biz taomlarimizning mazasiga e'tibor
+                qaratamiz. Har bir retseptda yangi taassurotlar bo'lishi uchun
+                2018 yildan beri xizmat qilmoqdamiz.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-item">
+              <h4 class="text-light mb-3">Kontakt</h4>
+              <p>
+                Manzil: Samarqand viloyati Samarqand shahri "Amir Temur"
+                ko'chasi 11 uy
+              </p>
+              <p>Telefon: +998-99-183-64-11</p>
+              <p>Telefon: +998-97-123-45-67</p>
+              <p>To'lov turlari: Naqd pul, Click, PayMe, Paynet</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright bg-dark py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 my-auto text-center text-md-end text-white">
+            Usbu sayt
+            <a class="border-bottom" href="https://t.me/rxg1985"
+              >RASULOV XAFIZ
+            </a>
+            tomonidan ishlab chiqilgan
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a
+      href="#"
+      class="btn btn-primary border-3 border-primary rounded-circle back-to-top"
+      ><i class="fa fa-arrow-up"></i
+    ></a>
+
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -810,6 +1112,5 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    </body>
-
+  </body>
 </html>
